@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/media" as *;
+
+.header {
+  padding: 3rem 1rem;
+
+  &__content {
+    @include flex(column, 1rem);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: $font-xxl;
+    font-weight: $weight-bold;
+    color: $color-text;
+  }
+
+  &__subtitle {
+    max-width: 38rem;
+    font-family: $font-body;
+    color: $color-text-muted;
+    line-height: 1.6;
+  }
+
+  @include md {
+    padding: 5rem 2rem;
+
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__subtitle {
+      font-size: $font-md;
+    }
+  }
+}
