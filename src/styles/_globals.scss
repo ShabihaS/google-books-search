@@ -1,4 +1,4 @@
-@use "./variables" as v;
+@use "./variables" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap");
 
@@ -16,9 +16,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: v.$color-bg;
-  color: v.$color-text;
-  font-family: v.$font-body;
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-body;
   line-height: 1.5;
 }
 

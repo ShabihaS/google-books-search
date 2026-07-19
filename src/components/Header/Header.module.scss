@@ -1,39 +1,32 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-@use "../../styles/media" as *;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+@use "../../styles/media" as media;
+
 
 .header {
   padding: 3rem 1rem;
 
   &__content {
-    @include flex(column, 1rem);
-    align-items: center;
-    text-align: center;
+    @include m.flex(column, 1rem);
   }
 
   &__title {
-    font-family: $font-heading;
-    font-size: $font-xxl;
-    font-weight: $weight-bold;
-    color: $color-text;
+    font-family: v.$font-heading;
+    font-size: v.$font-xxl;
+    font-weight: v.$weight-bold;
+    color: v.$color-text;
   }
 
   &__subtitle {
-    max-width: 38rem;
-    font-family: $font-body;
-    color: $color-text-muted;
-    line-height: 1.6;
+    font-family: v.$font-body;
+    color: v.$color-text-muted;
   }
 
-  @include md {
+  @include media.md {
     padding: 5rem 2rem;
 
     &__title {
       font-size: 3.5rem;
-    }
-
-    &__subtitle {
-      font-size: $font-md;
     }
   }
 }
