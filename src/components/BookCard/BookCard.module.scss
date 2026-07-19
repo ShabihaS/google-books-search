@@ -1,0 +1,36 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/media" as media;
+
+.card {
+  @include m.flex(column, 1rem);
+
+  background-color: #1E222B;
+  padding: 1rem;
+  border-radius: 12px;
+
+  .image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .author {
+    color: #94A3B8;
+  }
+
+  .description {
+    overflow: hidden;
+  }
+
+  @include media.md {
+    flex-direction: row;
+
+    .image {
+      width: 150px;
+    }
+  }
+}
