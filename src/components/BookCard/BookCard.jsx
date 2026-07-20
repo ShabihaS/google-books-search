@@ -10,27 +10,29 @@ function BookCard({ book }) {
 
   return (
     <article className={classes.card}>
-
-      <img
-        className={classes.image}
-        src={imageLinks?.thumbnail || "/placeholder.png"}
-        alt={title}
-      />
+      {imageLinks?.thumbnail ? (
+  <img
+    className={classes.image}
+    src={imageLinks.thumbnail}
+    alt={title}
+  />
+) : (
+  <div className={classes.noImage}>
+    No Image Available
+  </div>
+)}
 
       <div className={classes.content}>
-        <h2 className={classes.title}>
-          {title}
-        </h2>
+        <h2 className={classes.title}>{title}</h2>
 
         <p className={classes.author}>
           {authors?.join(", ") || "Unknown author"}
         </p>
 
         <p className={classes.description}>
-          {description || "No description available"}
+          {description || "No description available."}
         </p>
       </div>
-
     </article>
   );
 }
