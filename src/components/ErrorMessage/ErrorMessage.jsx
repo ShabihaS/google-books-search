@@ -1,8 +1,8 @@
-import styles from "./ErrorMessage.module.scss";
+import classes from "./ErrorMessage.module.scss";
 
 function ErrorMessage({ message }) {
   return (
-    <div className={styles.error}>
+    <div className={classes.error}>
       <p>{message}</p>
     </div>
   );

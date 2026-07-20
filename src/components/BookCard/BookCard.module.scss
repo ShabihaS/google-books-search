@@ -7,6 +7,7 @@
   border-radius: 12px;
   padding: 1rem;
   height: 100%;
+  cursor: pointer;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -24,9 +25,15 @@
   border-radius: 8px;
 }
 
+
+
 .content {
   @include m.flex(column, 0.75rem);
   flex: 1;
+
+  button {
+    margin-top: auto;
+  }
 }
 
 .title {
@@ -48,10 +55,12 @@
   line-height: 1.5;
   margin: 0;
 
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+
+  min-height: calc(0.9rem * 1.5 * 4);
 }
 .noImage {
   height: 280px;

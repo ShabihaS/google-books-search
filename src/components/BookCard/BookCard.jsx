@@ -1,6 +1,7 @@
 import classes from "./BookCard.module.scss";
+import Button from "../Button/Button";
 
-function BookCard({ book }) {
+function BookCard({ book, onSelect }) {
   const {
     title,
     authors,
@@ -10,17 +11,18 @@ function BookCard({ book }) {
 
   return (
     <article className={classes.card}>
+
       {imageLinks?.thumbnail ? (
-  <img
-    className={classes.image}
-    src={imageLinks.thumbnail}
-    alt={title}
-  />
-) : (
-  <div className={classes.noImage}>
-    No Image Available
-  </div>
-)}
+        <img
+          className={classes.image}
+          src={imageLinks.thumbnail}
+          alt={title}
+        />
+      ) : (
+        <div className={classes.noImage}>
+          No Image Available
+        </div>
+      )}
 
       <div className={classes.content}>
         <h2 className={classes.title}>{title}</h2>
@@ -32,7 +34,13 @@ function BookCard({ book }) {
         <p className={classes.description}>
           {description || "No description available."}
         </p>
+
+        <Button onClick={() => onSelect(book)}>
+          View Details
+        </Button>
+
       </div>
+
     </article>
   );
 }
