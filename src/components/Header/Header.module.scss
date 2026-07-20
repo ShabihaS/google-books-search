@@ -4,26 +4,33 @@
 
 
 .header {
-  padding: 3rem 1rem;
+  padding: v.$space-xl v.$space-sm;
+  text-align: center;
 
   &__content {
-    @include m.flex(column, 1rem);
+    @include m.flex(column, v.$space-sm);
   }
+
 
   &__title {
     font-family: v.$font-heading;
     font-size: v.$font-xxl;
     font-weight: v.$weight-bold;
     color: v.$color-text;
+    margin: 0;
   }
+
 
   &__subtitle {
     font-family: v.$font-body;
+    font-size: v.$font-md;
     color: v.$color-text-muted;
+    margin: 0;
   }
 
+
   @include media.md {
-    padding: 5rem 2rem;
+    padding: v.$space-xxl v.$space-md;
 
     &__title {
       font-size: 3.5rem;

@@ -1,11 +1,15 @@
+@use "../../styles/variables" as v;
+
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+
+  padding: v.$space-lg;
 
   p {
-    color: #94a3b8;
-    font-size: 1.2rem;
+    color: v.$color-text-muted;
+    font-size: v.$font-md;
+    margin: 0;
   }
 }

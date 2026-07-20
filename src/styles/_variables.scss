@@ -2,38 +2,77 @@
 // Colors
 // ========================================
 
-$color-bg: #12151c;
-$color-surface: #1e222b;
+// Background
+$color-bg: #07051a;
 
-$color-text: #e2e8f0;
-$color-text-muted: #94a3b8;
+// Cards / surfaces
+$color-surface: #151335;
 
-$color-border: #334155;
+// Modal / elevated surface
+$color-modal: #1d1947;
 
-$color-primary: #4f46e5;
-$color-secondary: #06b6d4;
+// Overlay
+$color-overlay: rgba(0, 0, 0, 0.65);
+
+// Text
+$color-text: #f8fafc;
+$color-text-muted: #a1a1aa;
+$color-text-secondary: #cbd5e1;
+
+// Borders
+$color-border: #2a274f;
+
+// ========================================
+// Brand Colours
+// ========================================
+
+$color-primary: #7c3aed;
+$color-primary-hover: #6d28d9;
+
+$color-secondary: #a855f7;
+$color-secondary-hover: #9333ea;
+
+// ========================================
+// Status
+// ========================================
 
 $color-success: #10b981;
 $color-error: #ef4444;
+$color-warning: #f59e0b;
+
+// ========================================
+// Spacing
+// ========================================
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-xxl: 5rem;
+
+// Error states
+$color-error-bg: rgba(239, 68, 68, 0.15);
+$color-error-text: #fca5a5;
 
 // ========================================
 // Typography
 // ========================================
 
-$font-heading: "Poppins", sans-serif;
-$font-body: "Inter", sans-serif;
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Inter', sans-serif;
 
 // ========================================
 // Font Sizes
 // ========================================
 
-$font-xs: 0.75rem;
-$font-sm: 0.875rem;
-$font-base: 1rem;
-$font-md: 1.125rem;
-$font-lg: 1.5rem;
-$font-xl: 2rem;
-$font-xxl: 2.75rem;
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-base: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.5rem; // 24px
+$font-xl: 2rem; // 32px
+$font-xxl: 2.75rem; // 44px
 
 // ========================================
 // Font Weight
@@ -48,16 +87,41 @@ $weight-bold: 700;
 // Radius
 // ========================================
 
-$radius-sm: 0.5rem;
-$radius-md: 0.75rem;
-$radius-lg: 1rem;
+$radius-sm: 0.5rem; // 8px
+$radius-md: 0.75rem; // 12px
+$radius-lg: 1rem; // 16px
+$radius-xl: 1.5rem; // 24px
 
 // ========================================
 // Shadow
 // ========================================
 
 $shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+
 $shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+$shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+// Purple glow effect
+$shadow-purple: 0 10px 30px rgba(124, 58, 237, 0.25);
+
+// ========================================
+// Layout
+// ========================================
+
+$container-width: 1200px;
+
+$header-height: 70px;
+
+// ========================================
+// Breakpoints
+// ========================================
+
+$mobile: 600px;
+
+$tablet: 768px;
+
+$desktop: 1024px;
 
 // ========================================
 // Transition

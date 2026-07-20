@@ -1,10 +1,11 @@
-@use "../../styles/media" as media;
+@use '../../styles/media' as media;
+@use '../../styles/variables' as v;
 
 .bookGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: v.$space-lg;
+  padding: v.$space-lg;
 }
 
 @include media.sm {
