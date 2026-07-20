@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import BookCard from "./components/BookCard/BookCard";
 import { searchBooks } from "./services/bookApi";
+import BookGrid from "./components/BookGrid/BookGrid";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -24,14 +25,7 @@ function App() {
       <main>
         <h1>Google Books Search</h1>
 
-        <section>
-          {books.map((book) => (
-            <BookCard
-              key={book.id}
-              book={book}
-            />
-          ))}
-        </section>
+       <BookGrid books={books} />
 
       </main>
     </>
