@@ -1,21 +1,23 @@
+@use '../../styles/variables' as v;
+
 .button {
   border: none;
   cursor: pointer;
 
   padding: 0.6rem 1.2rem;
 
-  border-radius: 8px;
+  border-radius: v.$radius-sm;
 
-  background-color: #334155;
-  color: #e2e8f0;
+  background-color: v.$color-primary;
+  color: v.$color-text;
 
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: v.$font-base;
+  font-weight: v.$weight-medium;
 
-  transition: all 0.2s ease;
+  transition: v.$transition;
 
   &:hover {
-    background-color: #475569;
+    background-color: v.$color-primary-hover;
   }
 
   &:active {

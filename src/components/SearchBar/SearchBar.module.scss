@@ -1,29 +1,66 @@
-@use "../../styles/mixins" as m;
-@use "../../styles/media" as media;
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+@use '../../styles/media' as media;
 
 .searchBar {
-  @include m.flex(row, 1rem);
+  @include m.flex(column, v.$space-sm);
+
   justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  padding: v.$space-lg;
+}
 
-  input {
-    width: 300px;
-    padding: 0.8rem;
-    border-radius: 8px;
+.searchControls {
+  @include m.flex(row, v.$space-sm);
+
+  justify-content: center;
+}
+
+.searchBar input {
+  width: 300px;
+
+  padding: v.$space-xs;
+
+  border-radius: v.$radius-sm;
+  border: 1px solid v.$color-border;
+
+  background-color: v.$color-surface;
+  color: v.$color-text;
+
+  font-size: v.$font-base;
+
+  outline: none;
+
+  transition: v.$transition;
+
+  &::placeholder {
+    color: v.$color-text-muted;
   }
 
-  button {
-    padding: 0.8rem 1.5rem;
-  }
-
-  @include media.sm {
-    input {
-      width: 400px;
-    }
-  }
-
-  @include media.md {
-    padding: 3rem;
+  &:focus {
+    border-color: v.$color-primary;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
   }
 }
 
+.searchBar button {
+  padding: v.$space-xs v.$space-md;
+}
+
+.error {
+  color: v.$color-error;
+  font-size: v.$font-sm;
+  margin: 0;
+}
+
+@include media.sm {
+  .searchBar input {
+    width: 400px;
+  }
+}
+
+@include media.md {
+  .searchBar {
+    padding: v.$space-xl;
+  }
+}
