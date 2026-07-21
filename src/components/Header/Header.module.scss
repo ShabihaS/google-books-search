@@ -1,16 +1,38 @@
-@use "../../styles/variables" as v;
-@use "../../styles/mixins" as m;
-@use "../../styles/media" as media;
-
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+@use '../../styles/media' as media;
 
 .header {
   padding: v.$space-xl v.$space-sm;
   text-align: center;
 
+  animation: fadeDown 0.8s ease-out;
+
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      v.$color-primary,
+      v.$color-secondary,
+      v.$color-primary
+    );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 4s linear infinite;
+
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: drop-shadow(0 0 10px v.$color-secondary);
+    }
+  }
+
   &__content {
     @include m.flex(column, v.$space-sm);
   }
-
 
   &__title {
     font-family: v.$font-heading;
@@ -18,16 +40,18 @@
     font-weight: v.$weight-bold;
     color: v.$color-text;
     margin: 0;
-  }
 
+    animation: scaleIn 0.8s ease-out 0.2s both;
+  }
 
   &__subtitle {
     font-family: v.$font-body;
     font-size: v.$font-md;
     color: v.$color-text-muted;
     margin: 0;
-  }
 
+    animation: fadeUp 0.8s ease-out 0.4s both;
+  }
 
   @include media.md {
     padding: v.$space-xxl v.$space-md;
@@ -35,5 +59,53 @@
     &__title {
       font-size: 3.5rem;
     }
+  }
+}
+
+// Animations
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
   }
 }

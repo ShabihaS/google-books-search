@@ -53,6 +53,26 @@
   margin: 0;
 }
 
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  opacity: 0.7;
+}
+
+.inputWrapper input {
+  padding-left: 2.5rem;
+}
+
 @include media.sm {
   .searchBar input {
     width: 400px;
